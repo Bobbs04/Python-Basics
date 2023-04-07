@@ -50,9 +50,9 @@ greet = greeting('Hello')
 greet('Winnie')
 
 
-def add(num):
+def add(nums):
     def numbers(x):
-        print(num + x)
+        print(nums + x)
     return numbers
 
 
@@ -77,8 +77,21 @@ def cube(x):
     def square():
         print(x * x * x)
 
-    return square
+    return squares
 
 
 squares = cube(2)
 squares()
+
+
+def print_msg(message):
+    greetings = "Hello"
+
+    def printer():
+        print(f'{greetings}, {message}')
+
+    return printer
+
+
+func = print_msg('Mace Hopeking')
+func()
